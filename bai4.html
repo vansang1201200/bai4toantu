@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" min="0" id="txtAmou">
+<select id="to"> 
+    <option value="vn">vietnam </option>
+    <option value="usd">USD</option>
+</select>
+<select
+ id="do">
+    <option value="usd">USD</option>
+    <option value="vn">vietnam</option>
+</select>.
+<button type="button" onclick="convert()">Convert</button><br><br>
+<div id="demo"></div>
+<script>
+    function convert(){
+        var a = document.getElementById("to").value;
+        var b = document.getElementById("do").value;
+        var c = parseInt(document.getElementById("txtAmou").value);
+        if( a=='vn' && b=='usd') {
+            var area =   c/23000;
+            document.getElementById("demo").innerHTML="Result " + area.toFixed(2) + " USD";
+        }
+        if(a=='usd' && b=='usd') {
+            document.getElementById('demo').innerHTML="trung";
+        }
+        if(a=='usd' && b=='vn'){
+            var area= c*23000;
+            document.getElementById("demo").innerHTML="result " + area + "VND";
+        }
+        if(a=='VND' && b=='VND') {
+            ducoment.getElementById(demo).innerHTML="trung";
+        }
+    }
+</script>
+
+</body>
+</html>
